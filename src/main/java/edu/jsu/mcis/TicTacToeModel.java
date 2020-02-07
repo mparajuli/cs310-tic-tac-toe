@@ -74,7 +74,6 @@ public class TicTacToeModel {
 
         /* Initialize board by filling every square with empty marks */
         
-        // INSERT YOUR CODE HERE
         for ( int i = 0; i < board.length; i++ ){
             
             for ( int j = 0; j < board.length; j++ ){
@@ -119,25 +118,22 @@ public class TicTacToeModel {
         
         /* Return TRUE if the specified location is within the bounds of the board */
         
-       /* boolean bound = false; 
+       boolean bound = false; 
         
         if ( (row >= 0 && row < width) && ( col >= 0 && col < width ) ){
         
             bound = true;
            
         }
-        return bound;*/
-        return -1 < row && (row < width) && (-1 < col) && col < width;
+        return bound;
+        /*return -1 < row && (row < width) && (-1 < col) && col < width;*/
         
     }
 	
     private boolean isSquareMarked(int row, int col) {
         
         /* Return TRUE if the square at specified location is marked */
-        
-        // INSERT YOUR CODE HERE
-
-        //return !board[row][col].equals( Mark.EMPTY );
+                
         return board[row][col] != Mark.EMPTY;
             
     }
@@ -146,8 +142,6 @@ public class TicTacToeModel {
         
         /* Return the mark from the square at the specified location */
         
-        // INSERT YOUR CODE HERE
-
         return board[row][col];
             
     }
@@ -235,7 +229,6 @@ public class TicTacToeModel {
         
         /* Check the squares of the board to see if the game is a tie */
         
-        //boolean full = true;
         
         for ( int i = 0; i < width; i++ ) {
             for ( int j = 0; j < width; j++ ) {
@@ -243,12 +236,9 @@ public class TicTacToeModel {
                     return false;
                 }
         }
-        //if ( !full )
-          //  return false;
+        
         return true;
-       // return !( ( isMarkWin( Mark.X ) ) || ( isMarkWin( Mark.O ) ) );
-
-                
+                       
     }
 
     public boolean isGameover() {
